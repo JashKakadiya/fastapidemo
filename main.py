@@ -246,7 +246,42 @@ def delete_user(user_id: int,db: Session = Depends(get_session_local)):
 
 @app.post("/send_invite")
 def send_invite():
-    msg = MIMEText("Please check the API documentation at /docs")
+    msg = MIMEText('''
+Dear HRs,
+This is Jash kakadiya. 
+
+Here is your API documentation link of my repo: https://github.com/JashKakadiya/fastapidemo
+here is the sample of input 
+
+project_id: 1
+data : {
+    "company_name": "string",
+    "f_name": "string",
+    "l_name": "string",
+    "email": "user@example.com",
+    "password": "string",
+    "project_id": 1
+    
+}
+
+project_id: 2
+data : {
+    "mobile_num": "string",
+    "f_name": "string",
+    "l_name": "string",
+    "hashtag": "string",
+    "project_id": 2
+}
+
+project_id: 3
+data : {
+    "mobile": "string",
+    "f_name": "string",
+    "l_name": "string",
+    "dob": "string",
+    "project_id": 3
+}
+                   ''')
     msg["Subject"] = "API Documentation Link"
     msg["From"] = "student.gec416@gmail.com"
     msg["To"] = "shraddha@aviato.consulting, pooja@aviato.consulting"
