@@ -250,6 +250,7 @@ def send_invite():
 Dear HRs,
 This is Jash kakadiya. 
 
+Cloud is in GCP postgres database
 Here is your API documentation link of my repo: https://github.com/JashKakadiya/fastapidemo
 here is the sample of input 
 
